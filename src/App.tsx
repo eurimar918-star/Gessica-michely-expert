@@ -21,6 +21,7 @@ const EXPERT = {
   role: "Cirurgiã Dentista Geral",
   subRole: "Estética, saúde e confiança em cada atendimento",
   location: "Araguaína - Tocantins",
+  address: "Rua Ademar Vicente Ferreira 1267 Dent center",
   whatsappLink: "https://api.whatsapp.com/send/?phone=5563992557108&text=Ol%C3%A1%21+Vim+pelo+Instagram+%EF%BF%BD%0AGostaria+de+agendar+uma+consulta.&type=phone_number&app_absent=0&utm_source=ig",
   instagramLink: "https://www.instagram.com/dra.gessica_michely/",
 };
@@ -484,9 +485,14 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3 className="text-2xl font-serif text-white mb-2">{EXPERT.name}</h3>
           <p className="text-sm">{EXPERT.role}</p>
-          <p className="text-sm mt-1 flex items-center justify-center md:justify-start gap-2">
-            <MapPin className="w-4 h-4" /> {EXPERT.location}
-          </p>
+          <div className="mt-2 flex flex-col items-center md:items-start gap-1">
+            <p className="text-sm flex items-center justify-center md:justify-start gap-2">
+              <MapPin className="w-4 h-4" /> {EXPERT.location}
+            </p>
+            <p className="text-sm text-stone-500">
+              {EXPERT.address}
+            </p>
+          </div>
         </div>
 
         <div className="flex gap-6">
